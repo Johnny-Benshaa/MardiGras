@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<!--  -->
+
+<head>
+    <title>Mardi Gras New Orleans</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- animate css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/Mardi.jpg">
+
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar navbar-expand-lg navbar-light " id="pageTop">
+            <a class="navbar-brand" href="#"> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active col wow rollIn">
+                        <img class="mardilogo" src="images/logoMardi.png"> <span class="sr-only">(current)</span></img>
+                    </li>
+                    <li class="nav-item active col wow rollIn">
+                        <a class="nav-link  home" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item col wow rollIn">
+                        <a class="nav-link  about" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item col wow rollIn">
+                        <a class="nav-link  galery" href="galery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item col wow rollIn">
+                        <a class="nav-link  qa" href="Q&A.html">Q&A</a>
+                    </li>
+                    <li class="nav-item col wow rollIn">
+
+                        <a class="nav-link contact" href="contact.html">Contact</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+        <br>
+
+        <div class="cont">
+            <h1>Contact Us</h1>
+            <form action="" name="forme" class="forme">
+                <br>
+                <label for="">First Name</label><br>
+                <input type="text" id="fname">
+                <br> <span class="err1"></span><br>
+                <label for="">Last Name</label><br>
+                <input type="text" id="lname">
+                <br><span class="err2"></span><br>
+                <label for="">Email</label><br>
+                <input type="email" placeholder="Enter Email Here" id="uemail"><br>
+                <span class="err3"></span><br>
+                <br><label for="">Write To Us</label><br>
+                <textarea name="" id="txtar" cols="30" rows="7" placeholder="Enter your text here..."></textarea>
+                <br> <span class="err4"></span><br>
+                <input type="button" value="submit" id="btn">&nbsp;
+                <input type="reset" value="Reset">
+                &nbsp;
+
+            </form>
+        </div>
+        <button id="returnBtn"> <a href="#pageTop">Back Up</a></button>
+        <hr>
+        <footer>
+            <p>&copy;Johnny Benshaa <br>
+                this site brought to you by: HackerU college.
+            </p>
+        </footer>
+    </div>
+
+
+    <script>
+        document.querySelector('input[type=button]').addEventListener('click', validate);
+
+        function validate() {
+            let uname = document.querySelector("#fname");
+            let ulname = document.querySelector("#lname");
+            let uemail = document.querySelector("#uemail");
+            let textar = document.querySelector("#txtar");
+            if (uname.value == "") {
+                // alert("Enter Name Please");
+                document.querySelector(".err1").innerHTML = "Enter Name Please";
+                document.querySelector(".err1").style.color = "red";
+                uname.focus();
+            }
+            if (ulname.value == "") {
+                document.querySelector(".err2").innerHTML = "Enter Your Text Please"
+                document.querySelector(".err2").style.color = "red";
+
+            }
+            if (uemail.value == "" || uemail.value.indexOf("@") == -1 || uemail.value.indexOf(".") == -1) {
+                document.querySelector(".err3").innerHTML = "Enter Valid Email Please"
+                document.querySelector(".err3").style.color = "red";
+                uemail.focus();
+            }
+            if (textar.value < (rows = 2) || textar.value == "") {
+                document.querySelector(".err4").innerHTML = "Enter Your Text Please"
+                document.querySelector(".err4").style.color = "red";
+
+            } else {
+                document.location = "contact.html"
+
+            }
+
+
+        }
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
